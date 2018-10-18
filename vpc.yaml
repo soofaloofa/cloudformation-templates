@@ -41,7 +41,7 @@ Resources:
       VpcId: !Ref VPC
   InternetRoute:
     Type: AWS::EC2::Route
-    DependsOn: InternetGateway
+    DependsOn: VPCGatewayAttachment
     Properties:
       DestinationCidrBlock: 0.0.0.0/0
       GatewayId: !Ref InternetGateway
